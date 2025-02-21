@@ -16,14 +16,14 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-md">
-      <div className="container mx-auto px-4">
+    <header className="bg-white shadow-md w-full">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center py-4">
-          {/* Shifted logo and title further left with ml-[-20px] */}
-          <Link href="/" className="flex items-center ml-[-60px]">
-            {/* Image source should be relative to the public folder */}
-            <Image src="/CKC.png" alt="CKC Tech-Solutions Logo" width={60} height={70} className="mr-2" />
-            <span className="text-2xl font-bold text-blue-600">CKC Tech-Solutions & Consultancy Pvt Ltd</span>
+          <Link href="/" className="flex items-center">
+            <div className="relative w-12 h-12">
+              <Image src="/images/logo.png" alt="CKC Tech-Solutions Logo" fill className="object-contain" />
+            </div>
+            <span className="text-xl md:text-2xl font-bold text-blue-600 ml-2">CKC Tech-Solutions</span>
           </Link>
           <nav className="hidden md:flex space-x-6">
             {navItems.map((item) => (
@@ -32,13 +32,13 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden border-t">
           <nav className="flex flex-col items-center py-4 space-y-4">
             {navItems.map((item) => (
               <Link
@@ -56,3 +56,4 @@ export default function Header() {
     </header>
   )
 }
+
