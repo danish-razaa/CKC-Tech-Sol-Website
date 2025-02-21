@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <div className="relative w-12 h-12">
-              <Image src="/images/logo.png" alt="CKC Tech-Solutions Logo" fill className="object-contain" />
+              <Image src="/CKC.png" alt="CKC Tech-Solutions Logo" fill className="object-contain" />
             </div>
             <span className="text-xl md:text-2xl font-bold text-blue-600 ml-2">CKC Tech-Solutions</span>
           </Link>
