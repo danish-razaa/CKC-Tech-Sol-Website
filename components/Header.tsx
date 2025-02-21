@@ -23,7 +23,7 @@ export default function Header() {
             <div className="relative w-12 h-12">
               <Image src="/CKC.png" alt="CKC Tech-Solutions Logo" fill className="object-contain" />
             </div>
-            <span className="text-xl md:text-2xl font-bold text-blue-600 ml-2">CKC Tech-Solutions</span>
+            <span className="text-xl md:text-2xl font-bold text-blue-600 ml-2">CKC Tech-Solutions & Consultancy Pvt Ltd</span>
           </Link>
           <nav className="hidden md:flex space-x-6">
             {navItems.map((item) => (
